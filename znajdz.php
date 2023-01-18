@@ -41,12 +41,12 @@
             
             $btn = $_POST['btn'];
             $value = $_POST['value1'];
-            $query = "SELECT nazwa,ulica FROM kwiaciarnie WHERE miasto like '$value'";
+            $query = "SELECT `nazwa`,`ulica` FROM `kwiaciarnie` WHERE `miasto` like '$value'";
             
             $wynik = mysqli_query($conn, $query);
             
             while($row = mysqli_fetch_assoc($wynik)){
-                echo "<p>$row[nazwa], $row[ulica]</p>";
+                echo "<p> $row[nazwa], $row[ulica]</p>";
             };
 
             mysqli_close($conn);
